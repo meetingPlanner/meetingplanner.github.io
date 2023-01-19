@@ -4,57 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My portfolio | Artem Kuznetsov</title>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Meeting Planner</title>
+    <link rel="shortcut icon" href="images/mpIcon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+   
     <div class="toggle" onclick="toggleMenu();"></div>
 
     <section class="banner" id="home">
 
-        <div class="imgSideBar">
-            <img src="images/bg1.jpg"> 
-        </div>
+        <!--<div class="imgSideBar">
+            <img src="images/mpLogo600.jpg">
+        </div>-->
         <div class="contentBx">
-            <h5 class="logoText">My portfolio</h5>
+           
             <div>
-                <h4><span>Hello, </span>I'm</h4>
-                <h2>Meeting planner</h2>
-                <h4>I'm Junior FrontEnd Web Developer.</h4>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                    Fugiat dolor laudantium reprehenderit, ullam 
-                    excepturi ipsum libero dolorum temporibus. Sint 
-                    odio minima nam a iusto quia fugit error dolorum corporis eligendi.
+               
+                <h2><span id="meetId">Meeting</span> Planner</h2>
+                <h4>Aplikacja do planowania spotkań</h4>
+                <p>
+                    Misja, która przyświeca aplikacji <span id="meetId">Meeting</span> Planner to proste i przejrzyste zarządzanie spotkaniami oraz użytkownikami w <span id="meetId">Twojej </span> organizacji. <!--orgaznizacja i zarządzanie spotkaniami  <span id="meetId">Twojej</span> organizacji.
+                    Dzięki niej możesz w  <span id="meetId">prosty </span> i <span id="meetId">przejrzysty </span>sposób zarządzać spotkaniami oraz użytkownikami należacymi do Twojej organizacji.-->
                 </p>
-                <a href="#about" class="btn">About me</a>
+                <a href="#about" class="btn">Więcej o aplikacji</a>
             </div>
-            <ul class="sci">
-                <li><a href="https://www.facebook.com/profile.php?id=100023638340235"><img src="images/facebook.png"></a></li>
-                <li><a href="https://www.linkedin.com/in/artem-kuznetsov-2241a4212/"><img src="images/linkedinIcon.jpg"></a></li>
-                <li><a href="https://www.instagram.com/u_gr0und/"><img src="images/instagram.png"></a></li>
-            </ul>
+           
         </div>
-        <div class="container">
-            <div class="switch-background off-shadow">
-              <div class="innerSwitch">
-                <svg width="285" height="150" viewBox="0 0 208 31" fill="none" xmlns="http://www.w3.org/2000/svg" class="face">
-                  <path class="mouth" d="M77 30H130V30.3375C130 30.7034 118.136 31 103.5 31C88.8645 31 77 30.7034 77 30.3375V30Z" fill="#E76060" />
-                  <path class="eye eye-left" d="M60 0.000190258C60 16.5687 46.5685 30.0002 30 30.0002C13.4315 30.0002 0 16.5687 0 0.000190258C0 0.000190258 13.4315 5.5 30 5.5C46.5685 5.5 60 0.000190258 60 0.000190258Z" fill="#474747" />
-                  <path class="eye eye-right" d="M208 0.999969C208 17.5685 194.569 31 178 31C161.431 31 148 17.5685 148 0.999969C148 0.999969 161.431 9.00001 178 9.00001C194.569 9.00001 208 0.999969 208 0.999969Z" fill="#474747" />
-                </svg>
-              </div>
-            </div>
-          </div>
+        
     </section>
-
+        
 
     <section class="about" id="about">
         <div class="title white">
-            <h2>More information about me</h2>
+            <h2>Funkcje aplikacji</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
         </div>
         <div class="content">
@@ -254,21 +240,17 @@
         </div>
     </section>
 
-    <div class="copyright">
-        <p>Praca wykonana przez: Artem Kuznetsov</p>
-        <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+    <div class="nav">
+        <div class="sideBar">
+            <ul class="menu">
+                <li><a href="#home" onclick="toggleMenu();">Meeting Planner</a></li>
+                <li><a href="#about" onclick="toggleMenu();">About</a></li>
+                <li><a href="#skills" onclick="toggleMenu();">Skills</a></li>
+                <li><a href="#work" onclick="toggleMenu();">Work</a></li>
+                <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+            </ul>
+        </div>
     </div>
-
-    <div class="sideBar">
-        <ul class="menu">
-            <li><a href="#home" onclick="toggleMenu();">Home</a></li>
-            <li><a href="#about" onclick="toggleMenu();">About</a></li>
-            <li><a href="#skills" onclick="toggleMenu();">Skills</a></li>
-            <li><a href="#work" onclick="toggleMenu();">Work</a></li>
-            <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
-        </ul>
-    </div>
-
 
     <script>
     function toggleMenu(){

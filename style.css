@@ -13,7 +13,7 @@ scroll-behavior: smooth;
     right: 30px;
     width: 50px;
     height: 50px;
-    background: black url(images/menu.png);
+    background:  url(images/menu.png);
     background-size: cover; /* 30px */
     background-position: center;
     background-repeat: no-repeat;
@@ -37,11 +37,14 @@ section{
     min-height: 100vh;
 }
 .banner .imgSideBar{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 650px;
-    height: 100%;
+    justify-content:center;
+    align-items:center;
+    display:flex;
+    position: relative;
+    top: 50%;
+    left: 5%;
+    width: 600px;
+    height: 600px;
 }
 .banner .imgSideBar img{
    position: absolute;
@@ -51,7 +54,7 @@ section{
    height: 100%;
    object-fit: cover;
 }
-.banner .contentBx, .sideBar{
+.banner .contentBx{
     position: absolute;
     top: 0;
     right: 0;
@@ -62,6 +65,17 @@ section{
     align-items: center;
     padding: 100px;
 }
+     .sideBar {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: calc(100% - 1350px);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 100px;
+    }
 .logoText{
     position: absolute;
     top: 40px;
@@ -75,7 +89,7 @@ section{
 }
 .banner .contentBx h4{
     font-size: 1.5em;
-    color:  #333;
+    color:  white;
     font-weight: 300;
 }
 .banner .contentBx h4 span{
@@ -84,17 +98,18 @@ section{
     font-weight: 700;
 }
 .banner .contentBx h2{
-    color: #333;
+    color: white;
     line-height: 1em;
     font-size: 3em;
 }
 p{
+    color: white;
     font-size: 1.1em;
     margin: 20px 0;
-    font-weight: 300;
+    width:600px;
 }
 .btn{
-    background: #00bcd4;
+    background: #887f6e;
     color: white;
     padding: 10px 30px;
     display: inline-block;
@@ -168,7 +183,7 @@ text-align: center;
 }
 .title h2{
     position: relative;
-    color: #00bcd4;
+    color: white;
     font-size: 1.8em;
     font-weight: 700;
     letter-spacing: 1px;
@@ -194,8 +209,8 @@ text-align: center;
 .title.white h2::before{
     background: radial-gradient(white, black);
 }
-.about{
-    background: black;
+.about {
+    background: #887f6e;
 }
 .about .content{
     display: flex;
@@ -370,7 +385,10 @@ text-align: center;
 
 @media (max-width: 991px){
     .banner .imgSideBar{
-        display: none;
+        display: flex;
+        justify-content: center;
+        height:1000px;
+        align-items:center;
     }
     .banner .contentBx, .sideBar{
         width: 100%;
@@ -448,7 +466,8 @@ text-align: center;
   html,
   body {
     height: 100vh;
-    background-color: white;
+    width:100%;
+    background-color: black;
   }
   .banner .container{
     position: relative;
@@ -516,4 +535,12 @@ text-align: center;
     font-family: Orbitron; 
     letter-spacing: 7px;
     left: 60%;
+}
+.nav{
+    background-color:red;
+    overflow: hidden;
+    position:fixed;
+}
+#meetId{
+    color:#887f6e;
 }
