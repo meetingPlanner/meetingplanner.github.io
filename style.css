@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 * {
-    margin: 0;
+    margin: auto;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    /*display:flex;*/
 }
 
 .toggle {
@@ -35,6 +36,8 @@ section {
 }
 
 .banner {
+    display:flex;
+    flex-direction:row;
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -45,37 +48,33 @@ section {
         align-items: center;
         display: flex;
         position: relative;
-        top: 50%;
-        left: 5%;
-        width: 600px;
-        height: 600px;
+        justify-items:flex-start;
+        height: fit-content;
     }
 
         .banner .imgSideBar img {
-            width: 600px;
+            width: auto;
             display: flex;
             justify-content: center;
-            height: 600px;
+            height: auto;
             align-items: center;
         }
 
     .banner .contentBx {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: calc(100% - 650px);
-        height: 100%;
+        position: relative;
+        width: calc(100% - 50%);
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         padding: 100px;
+        height:fit-content;
     }
 
 .sideBar {
-    position: absolute;
+    position: relative;
     top: 0;
     right: 0;
-    width: calc(100% - 1350px);
+    width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -209,8 +208,8 @@ p {
         font-size: 45px;
         font-weight: 700;
         letter-spacing: 1px;
-        margin-bottom: 30px;
-        margin-top: -15px;
+        margin-bottom: auto;
+        margin-top: auto;
     }
 
     .title p {
@@ -297,12 +296,17 @@ p {
     filter: invert(1);
 } */
             .skills .content .skillsBx h1 {
-                margin-top: 20px;
-                margin-bottom: 10px;
-                font-size: 25 px;
+                position:relative;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                margin-top: auto;
+                margin-bottom: auto;
+                /*font-size: 25 px;*/
                 font-weight: 600;
                 transition: 0.5s;
                 color: white;
+                height:60px;
             }
 
             .skills .content .skillsBx:hover h1 {
@@ -445,24 +449,23 @@ p {
 
 @media (max-width: 991px) {
     .banner {
-        display: block;
-        flex-direction: row;
+        display: flex;
+        flex-direction: column;
     }
 
-        .banner .imgSideBar {
-            /* margin: 0 auto;*/
-            display:block;
-            margin-top:50px;
-            margin-left:15%;
-            margin-right:15%;
-            flex-direction: column;
-            display: flex;
-            height: 230px;
-            width: 230px;
+    .contentBx{
+        bottom:140px;
+    }
 
-
-          
-        }
+    .banner .imgSideBar {
+        /* margin: 0 auto;*/
+        flex-direction: column;
+        display: flex;
+        align-self: center;
+        align-items: self-start;
+        height: 500px;
+        top: 100px;
+    }
         .banner .contentBx h2 {
             color: white;
             line-height: 1em;
@@ -479,10 +482,16 @@ p {
         vertical-align: middle;
     }
 
-        .banner .contentBx, .sideBar {
-            width: 100%;
-            padding: 40px;
-        }
+    .banner .contentBx, .sideBar {
+        width: 100%;
+        padding: 40px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-self: center;
+        position: inherit;
+        /*bottom: 140px;*/
+    }
 
     .logoText {
         left: 40px;
